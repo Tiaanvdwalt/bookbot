@@ -1,25 +1,30 @@
-def get_book_text(path_to_file):
-    with open(path_to_file) as f:
-        file_contents = f.read()
-    return file_contents
+def get_num_words(text):
+    words = text.split()
+    return len(words)
 
-def count_words():
-    counter = 0
-    book_text = get_book_text("books/frankenstein.txt")
-    words = book_text.split()
-    for word in words:
-        counter += 1
-    total_word_count = f"{counter} words found in the document"
-    print(total_word_count)
-    return total_word_count
-
-def count_characters():
-    counter = 0
-    book_text = get_book_text("books/frankenstein.txt").lower()
-    print(book_text)
+def count_characters(text):
+    char_count = {}
+    book_text = text.lower()
+    for char in book_text:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    return char_count
     
 
 
 
 
-count_characters()
+
+''' 
+def count_characters(text):
+    char_count = {}
+    book_text = get_book_text("books/frankenstein.txt").lower()
+    for char in book_text:
+        if char in char_count:
+            char_count[char] += 1
+        else:
+            char_count[char] = 1
+    return char_count
+'''
