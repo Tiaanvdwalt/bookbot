@@ -12,6 +12,9 @@ def count_characters(text):
             char_count[char] = 1
     return char_count
 
+def list_of_dicts(dict):
+    list_of_dicts = [{k: v} for k, v in dict.items()]
+    return list_of_dicts
 
 def sort_on(items):
     return items["num"]

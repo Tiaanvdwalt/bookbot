@@ -1,6 +1,6 @@
 from stats import get_num_words
 from stats import count_characters
-from stats import sort_dict
+from stats import list_of_dicts
 from stats import sort_on
 
 def main():
@@ -10,6 +10,9 @@ def main():
     total_characters = count_characters(text)
     #print(num_words)
     #print(total_characters)
+    dict_list = list_of_dicts(total_characters)
+    #dict_list.sort(reverse=True, key=sort_on)
+    print(dict_list)
     
 
 def get_book_text(book_path):
