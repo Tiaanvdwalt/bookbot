@@ -13,12 +13,8 @@ def count_characters(text):
     return char_count
 
 def list_of_dicts(dict):
-    list_of_dicts = [{k: v} for k, v in dict.items()]
+    list_of_dicts = [{"char": k, "num": v} for k, v in dict.items() if k.isalpha()]
     return list_of_dicts
 
 def sort_on(items):
     return items["num"]
-
-def sort_dict(total_characters):
-    sorted_text = total_characters.sort(key=sort_on)
-    return sorted_text
